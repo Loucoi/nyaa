@@ -1,18 +1,20 @@
 {
-  "name": "Repositório Nyaa Extension",
-  "description": "Extensão para acessar torrents do Nyaa.si no Miru",
-  "version": "1.0.0",
-  "author": "Seu Nome",
+  "repo": {
+    "name": "Nyaa Extension Repository",
+    "description": "Repositório de extensão para Nyaa.si",
+    "version": "1.0.0",
+    "author": "Loucoi",
+    "url": "https://github.com/Loucoi/nyaa"
+  },
   "extensions": [
     {
       "name": "Nyaa",
+      "package": "nyaa.si",
       "version": "1.0.0",
-      "description": "Buscar e baixar torrents do Nyaa.si",
-      "author": "Extension Developer",
-      "icon": "https://nyaa.si/static/favicon.ico",
-      "type": "torrent",
-      "main": "nyaa.js",
-      "url": "https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/nyaa.js"
+      "author": "Loucoi",
+      "language": "pt",
+      "type": "bangumi",
+      "source": "https://raw.githubusercontent.com/Loucoi/nyaa/refs/heads/main/nyaa.js"
     }
   ]
 }
