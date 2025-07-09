@@ -1,30 +1,27 @@
-// Extensão Nyaa para Miru
-// Permite buscar e baixar torrents do site Nyaa.si
+// ==MiruExtension==
+// @name Nyaa
+// @version v1.0.0
+// @author Loucoi
+// @lang pt
+// @icon https://nyaa.si/static/favicon.ico
+// @package nyaa.si
+// @type bangumi
+// @webSite https://nyaa.si/
+// ==/MiruExtension==
 
-const extension = {
-  // Metadados da extensão
-  meta: {
-    name: "Nyaa",
-    version: "1.0.0",
-    author: "Extension Developer",
-    description: "Extensão para buscar e baixar torrents do Nyaa.si",
-    icon: "https://nyaa.si/static/favicon.ico",
-    type: "torrent",
-    baseUrl: "https://nyaa.si"
-  },
-
-  // Configuração da extensão
-  settings: {
-    baseUrl: "https://nyaa.si",
-    searchEndpoint: "/?f=0&c=0_0&q=",
-    categories: {
+export default class extends Extension {
+  constructor() {
+    super();
+    this.baseUrl = "https://nyaa.si";
+    this.searchEndpoint = "/?f=0&c=0_0&q=";
+    this.categories = {
       "anime": "1_2",
-      "music": "2_0",
+      "music": "2_0", 
       "games": "6_0",
       "software": "1_1",
       "all": "0_0"
-    }
-  },
+    };
+  }
 
   // Função para buscar torrents
   async search(query, options = {}) {
